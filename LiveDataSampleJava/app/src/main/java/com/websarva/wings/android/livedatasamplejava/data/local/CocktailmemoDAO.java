@@ -10,11 +10,11 @@ import androidx.room.Query;
 @Dao
 public interface CocktailmemoDAO {
 	@Query("SELECT * FROM cocktailmemos WHERE id = :id")
-	public ListenableFuture<Cocktailmemo> findByPK(int id);
+	ListenableFuture<Cocktailmemo> findByPK(int id);
 
 	@Insert
-	public ListenableFuture<Long> insert(Cocktailmemo cocktailmemo);
+	ListenableFuture<Long> insert(Cocktailmemo cocktailmemo);
 
 	@Delete
-	public ListenableFuture<Integer> delete(Cocktailmemo cocktailmemo);
+	ListenableFuture<Integer> delete(Cocktailmemo cocktailmemo);
 }
