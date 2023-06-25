@@ -7,13 +7,11 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.websarva.wings.android.livedatasamplejava.data.local.Cocktailmemo;
 import com.websarva.wings.android.livedatasamplejava.ui.MainViewModel;
 
-import javax.annotation.Nonnull;
-
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.Observer;
@@ -50,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
 
 	private class CocktailmemoObserver implements Observer<Cocktailmemo> {
 		@Override
-		public void onChanged(@Nonnull Cocktailmemo cocktailmemo) {
+		public void onChanged(@NonNull Cocktailmemo cocktailmemo) {
 			TextView tvCocktailName = findViewById(R.id.tvCocktailName);
 			tvCocktailName.setText(cocktailmemo.name);
 			EditText etNote = findViewById(R.id.etNote);
